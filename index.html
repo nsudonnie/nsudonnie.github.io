@@ -8,28 +8,29 @@
     <title>my introoo :3</title>
     <meta property="og:title" content="my introoo :3">
     <meta property="og:description" content="my cooool intro website, come here to learn more stuff about me!!!">
-    <meta property="og:image" content="https://pbs.twimg.com/media/GmCcGPYWYAAUY0c?format=jpg&name=240x240">
+    <meta property="og:image" content="/media/funny.jpg">
     <meta property="og:url" content="https://example.com/page">
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="vfx.css">
+    <link rel="icon" href="media/funny.jpg">
 
     <style>
-        
+
         @font-face {
             font-family: "VCR OSD MONO";
             src: url("media/VCR_OSD_MONO_1.001.ttf");
         }
 
         body {
-            background-color: rgb(0, 5, 0);
+            background-color: rgb(0, 10, 0);
             color: rgb(0, 255, 0);
             font-family: "VCR OSD MONO", monospace;
-            font-size: 2vh;
             -webkit-font-smoothing: none;
+            font-size: 2vh;
             line-height: 2.5vh;
-            padding-left: 4.5vw;
+            padding-left: 5vw;
             padding-top: 5vh;
         }
         
@@ -42,7 +43,7 @@
             object-fit: stretch;
             z-index: 10;
             pointer-events: none;
-            background-image: radial-gradient(transparent, black 200%);
+            background-image: radial-gradient(transparent, black 125%);
         }
 
     </style>
@@ -50,7 +51,7 @@
 </head>
 
 <body class="crt">
-    
+
     <img src="media/bezel.png" class = "bezel">
 
     <h3></h3>
@@ -162,13 +163,13 @@
 
             let newLink = document.querySelectorAll("a");
             newLink[0].innerHTML = "<strong> " + "[TWITTER (X)]" + " </strong>" + " <br>";
-            await timer(500);
+            await timer(250);
             newLink[1].innerHTML = "<strong> " + "[YOUTUBE]" + " </strong>" + " <br>";
             await timer(100);
             newLink[2].innerHTML = "<strong> " + "[SPOTIFY]" + " </strong>" + " <br>";
-            await timer(250);
+            await timer(500);
             newLink[3].innerHTML = "<strong> " + "[ROBLOX]" + " </strong>" + " <br>";
-            await timer(750);
+            await timer(250);
             newLink[4].innerHTML = "<strong> " + "[STEAM]" + " </strong>" + " <br>";
             
             await timer(500);

@@ -4,7 +4,10 @@
     <head>
 
         <title>404 ERROR</title>
+        <meta charset="UTF-8">
+
         <link rel="stylesheet" href="https://nsudonnie.github.io/vfx.css" type="text/css" media="screen" />
+        <link rel="icon" href="https://nsudonnie.github.io/media/errorguy.jpg" type="image/jpg" />
         
         <style>
 
@@ -14,12 +17,12 @@
             }
 
             body {
-                background-color: rgb(0, 5, 0);
+                background-color: rgb(0, 10, 0);
                 color: rgb(0, 255, 0);
                 font-family: "VCR OSD MONO", monospace;
-                font-size: 24px;
                 -webkit-font-smoothing: none;
-                line-height: 1.2;
+                font-size: 2vh;
+                line-height: 2.5vh;
             }
 
             .bezel {
@@ -28,16 +31,16 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: stretch;
                 z-index: 10;
                 pointer-events: none;
-                background-image: radial-gradient(transparent, black 200%);
+                background-image: radial-gradient(transparent, black 125%);
             }
 
-            .hourglass {
-                width: 50px;
-                height: 50px;
-                pointer-events: none;
+            .errorguy {
+                width: 2.5vw;
+                height: 2.5vw;
+                object-fit: contain;
             }
     
         </style>
@@ -48,8 +51,8 @@
 
         <img src="https://nsudonnie.github.io/media/bezel.png" class="bezel">
 
-        <div style="text-align: center; margin-top: 20%;">
-            <img src="https://nsudonnie.github.io/media/hourglass.gif" class="hourglass">
+        <div style="text-align: center; margin-top: 40vh;">
+            <img src="https://nsudonnie.github.io/media/errorguy.png" class="errorguy">
             <h3></h3>
             <a href="https://nsudonnie.github.io"></a>
         </div>
