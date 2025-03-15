@@ -11,15 +11,20 @@
     <meta property="og:image" content="https://pbs.twimg.com/media/GmCcGPYWYAAUY0c?format=jpg&name=240x240">
     <meta property="og:url" content="https://example.com/page">
     <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="vfx.css">
 
     <style>
         
         body {
-            background-color: black;
+            background-color: rgb(0, 5, 0);
             color: rgb(0, 255, 0);
             font-family: monospace;
+            font-size: 24px;
+            -webkit-font-smoothing: none;
+            line-height: 1.2;
+            padding-left: 24px;
         }
 
     </style>
@@ -29,6 +34,7 @@
 <body class="crt">
 
     <h3></h3>
+    <a href="https://x.com/nsudonniee" target="_blank"></a>
 
     <script>
 
@@ -46,6 +52,7 @@
             let newElement = document.querySelector("h3");
 
             for (let i = 0; i < text.length;) {
+
                 newElement.innerHTML += text.charAt(i);
                 i++;
 
@@ -63,7 +70,7 @@
                     await timer(slowTime);
                 } else
                     await timer(normalTime);
-            
+                
             }
             
             newElement.innerHTML += "<br>";
@@ -73,10 +80,15 @@
         
         // run typewriter, and then wait until it finishes before running the next one
         async function runTypewriter() {
+
             await typewriter("Hello World!");
-            await typewriter("this is just a simple test for a multi-line typewriter effect.");
+            await typewriter("this is just a simple test for a website coded in HTML and CSS.");
             await typewriter("I hope you like it! :3");
             await typewriter("more stuff coming soon, so stay tuned!");
+
+            let newLink = document.querySelectorAll("a");
+            newLink[0].innerHTML = "my twitter page!";
+
         }
         
         runTypewriter();
