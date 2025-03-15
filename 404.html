@@ -4,13 +4,17 @@
     <head>
 
         <link rel="stylesheet" href="/vfx.css" type="text/css" media="screen" />
+        <link rel="image" href="/bezel.png" type="image/png" media="screen" />
 
         <style>
         
             body {
-                background-color: black;
+                background-color: rgb(0, 5, 0);
                 color: rgb(0, 255, 0);
                 font-family: monospace;
+                font-size: 24px;
+                -webkit-font-smoothing: none;
+                line-height: 1.2;
             }
     
         </style>
@@ -19,8 +23,11 @@
 
     <body class="crt">
 
+        <img src="/bezel.png" class="bezel">
+
         <div style="text-align: center; margin-top: 23%;">
             <h3></h3>
+            <a href="https://nsudonnie.github.io"></a>
         </div>
 
         <script>
@@ -69,6 +76,10 @@
                 await typewriter("Hmm....");
                 await typewriter("404 Not Found.");
                 await typewriter("This page does not exist.");
+
+                let newLink = document.querySelector("a");
+                newLink.innerHTML = "<strong> " + "[RETURN TO HOMEPAGE]" + " </strong>";
+
             }
             
             runTypewriter();
