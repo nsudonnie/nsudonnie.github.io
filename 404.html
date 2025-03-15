@@ -37,6 +37,18 @@
                 background-image: radial-gradient(transparent, black 125%);
             }
 
+            .static {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 5;
+                pointer-events: none;
+                opacity: 0.01;
+            }
+
             .errorguy {
                 width: 2.5vw;
                 height: 2.5vw;
@@ -50,6 +62,7 @@
     <body class="crt">
 
         <img src="https://nsudonnie.github.io/media/bezel.png" class="bezel">
+        <img src="https://nsudonnie.github.io/media/static.gif" class="static">
 
         <div style="text-align: center; margin-top: 40vh;">
             <img src="https://nsudonnie.github.io/media/errorguy.png" class="errorguy">

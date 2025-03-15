@@ -46,13 +46,26 @@
             background-image: radial-gradient(transparent, black 125%);
         }
 
+        .static {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 5;
+            pointer-events: none;
+            opacity: 0.01;
+        }
+
     </style>
 
 </head>
 
 <body class="crt">
 
-    <img src="media/bezel.png" class = "bezel">
+    <img src="media/bezel.png" class="bezel">
+    <img src="media/static.gif" class="static">
 
     <h3></h3>
     <a href="https://x.com/nsudonniee" target="_blank"></a>
