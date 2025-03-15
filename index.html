@@ -35,6 +35,9 @@
 
     <h3></h3>
     <a href="https://x.com/nsudonniee" target="_blank"></a>
+    <a href="https://www.youtube.com/@nsudonnie" target="_blank"></a>
+    <a href="https://open.spotify.com/user/hndxcdbu1b55f2ryjky9nj4qa" target="_blank"></a>
+    <a href="https://www.roblox.com/users/422816833/profile" target="_blank"></a>
 
     <script>
 
@@ -44,6 +47,11 @@
         // the timer function, used to create a delay
         function timer(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function newLine() {
+            let newElement = document.querySelector("h3");
+            newElement.innerHTML += "<br>";
         }
         
         // the typewriter function
@@ -78,16 +86,24 @@
 
         }
         
-        // run typewriter, and then wait until it finishes before running the next one
         async function runTypewriter() {
 
             await typewriter("Hello World!");
             await typewriter("this is just a simple test for a website coded in HTML and CSS.");
-            await typewriter("I hope you like it! :3");
+            await typewriter("i hope you like it! :3");
             await typewriter("more stuff coming soon, so stay tuned!");
 
+            newLine();
+            await typewriter("in the meantime, why dont you check out some of my socials?");
+
             let newLink = document.querySelectorAll("a");
-            newLink[0].innerHTML = "my twitter page!";
+            newLink[0].innerHTML = "<strong> " + "[TWITTER (X)]" + " </strong>" + " <br>";
+            await timer(250);
+            newLink[1].innerHTML = "<strong> " + "[YOUTUBE]" + " </strong>" + " <br>";
+            await timer(250);
+            newLink[2].innerHTML = "<strong> " + "[SPOTIFY]" + " </strong>" + " <br>";
+            await timer(250);
+            newLink[3].innerHTML = "<strong> " + "[ROBLOX]" + " </strong>" + " <br>";
 
         }
         
