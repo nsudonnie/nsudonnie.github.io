@@ -1,6 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <h3>intro wip</h3>
+<head>
+
+    <base href="https://nsudonnie.github.io">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="vfx.css">
+    <link rel="icon" href="media/funny.jpg">
+
+    <style>
+
+        @font-face {
+            font-family: "VCR OSD MONO";
+            src: url("media/VCR_OSD_MONO_1.001.ttf");
+        }
+
+        body {
+            background-color: rgb(0, 10, 0);
+            color: rgb(0, 255, 0);
+            font-family: "VCR OSD MONO", monospace;
+            -webkit-font-smoothing: none;
+            font-size: 2vh;
+            line-height: 2.5vh;
+            padding-left: 5vw;
+            padding-top: 5vh;
+            width: 90%;
+        }
+        
+        .bezel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: stretch;
+            z-index: 10;
+            pointer-events: none;
+            background-image: radial-gradient(transparent, black 125%);
+        }
+
+        .static {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 5;
+            pointer-events: none;
+            opacity: 0.025;
+        }
+
+    </style>
+
+<body class="crt">
+
+    <div class="overlay">
+        <img src="media/bezel.png" class="bezel">
+        <img src="media/static.gif" class="static">
+    </div>
+
+    <div class="main">
+        <h3></h3>
+    </div>
+
+    <div class="link">
+        <a href="https://nsudonnie.github.io"></a>
+    </div>
+
+    <script>
+
+        let slowTime = 200;
+        let normalTime = 50;
+
+        // the timer function, used to create a delay
+        function timer(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function newLine() {
+            let newElement = document.querySelector("h3");
+            newElement.innerHTML += "<br>";
+        }
+        
+        // the typewriter function
+        async function typewriter(text) {
+
+            let newElement = document.querySelector("h3");
+
+            for (let i = 0; i < text.length;) {
+
+                newElement.innerHTML += text.charAt(i);
+                i++;
+
+                if (text.charAt(i - 1) === ".") {
+                    await timer(slowTime);
+                } else if (text.charAt(i - 1) === "!") {
+                    await timer(slowTime);
+                } else if (text.charAt(i - 1) === "?") {
+                    await timer(slowTime);
+                } else if (text.charAt(i - 1) === ",") {
+                    await timer(slowTime);
+                } else if (text.charAt(i - 1) === ";") {
+                    await timer(slowTime);
+                } else if (text.charAt(i - 1) === ":") {
+                    await timer(slowTime);
+                } else
+                    await timer(normalTime);
+                
+            }
+            
+            newElement.innerHTML += "<br>";
+            await timer(500);
+
+        }
+        
+        async function runTypewriter() {
+
+            document.querySelector("h3").innerHTML = "[INITIALIZING, PLEASE WAIT...]";
+            let prevText = document.querySelector("h3").innerHTML;
+
+            newLine();
+            document.querySelector("h3").innerHTML += "[░░░░░░░░░░] 0%";
+            await timer(2000);
+
+            document.querySelector("h3").innerHTML = prevText;
+            newLine();
+            document.querySelector("h3").innerHTML += "[█░░░░░░░░░] 10%";
+            await timer(1000);
+            
+            document.querySelector("h3").innerHTML = prevText;
+            newLine();
+            document.querySelector("h3").innerHTML += "[███░░░░░░░] 30%";
+            await timer(500);
+
+            document.querySelector("h3").innerHTML = prevText;
+            newLine();
+            document.querySelector("h3").innerHTML += "[██████░░░░] 60%";
+            await timer(150);
+
+            document.querySelector("h3").innerHTML = prevText;
+            newLine();
+            document.querySelector("h3").innerHTML += "[█████████░] 90%";
+            await timer(500);
+
+            document.querySelector("h3").innerHTML = prevText;
+            newLine();
+            document.querySelector("h3").innerHTML += "[██████████] 100%";
+            await timer(1000);
+
+            document.querySelector("h3").innerHTML = "[INITIALIZING COMPLETE.]" + "<br>" + "[██████████] 100%";
+            await timer(2000);
+
+            newLine();
+            newLine();
+
+            await typewriter("firstly, before i introduce myself, i just want to say that i block freely. so if you are ever weird, i will not hesitate to block you.")
+            await typewriter("anyways, with that out of the way, let's move onto the intro!")
+
+            newLine();
+
+            await typewriter("hello, my name is nsudonnie, but you can just call me donnie!");
+            await typewriter("i like drawing, playing video games, making video games, and talking to people, despite my introvertedness :3");
+            await typewriter("i also have a small interest in vintage technologies!");
+
+            newLine();
+
+            await typewriter("my pronouns are he/him, and i am gay :3");
+            await typewriter("i know python, lua, and i am currently learning html!");
+
+            newLine();
+
+            await typewriter("some of my interests include:");
+            await typewriter("  1. furries (im a furry btw :3)");
+            await typewriter("  2. ULTRAKILL");
+            await typewriter("  3. roblox");
+            await typewriter("  4. programming / game development");
+            await typewriter("  5. art, specifically drawing");
+            await typewriter("  6. flamingo (the roblox youtuber)");
+            await typewriter("  7. friday night funkin'");
+
+            newLine();
+
+            await typewriter("i love making friends, so if you share ANY of the same interests as me, moot me NOW!!!!");
+            await typewriter("that's pretty much it for this, so click on the link below to return to the main page!");
+
+            newLine();
+
+            let link = document.querySelector("a");
+            link.innerHTML = "<strong>" + "[RETURN TO HOMEPAGE]" + " </strong>"
+
+        }
+        
+        runTypewriter();
+
+    </script>
+
+</body>
+
+</head>
 
 </html>
