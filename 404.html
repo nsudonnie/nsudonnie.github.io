@@ -3,17 +3,19 @@
 
     <head>
 
+        <base href="https://nsudonnie.github.io">
+
         <title>404 ERROR</title>
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" href="https://nsudonnie.github.io/vfx.css" type="text/css" media="screen" />
-        <link rel="icon" href="https://nsudonnie.github.io/media/errorguy.jpg" type="image/jpg" />
+        <link rel="stylesheet" href="/vfx.css" type="text/css" media="screen" />
+        <link rel="icon" href="/media/errorguy.jpg" type="image/jpg" />
         
         <style>
 
             @font-face {
                 font-family: "VCR OSD MONO";
-                src: url("https://nsudonnie.github.io/media/VCR_OSD_MONO_1.001.ttf");
+                src: url("/media/VCR_OSD_MONO_1.001.ttf");
             }
 
             body {
@@ -23,6 +25,7 @@
                 -webkit-font-smoothing: none;
                 font-size: 2vh;
                 line-height: 2.5vh;
+                width: 90%;
             }
 
             .bezel {
@@ -46,7 +49,7 @@
                 object-fit: cover;
                 z-index: 5;
                 pointer-events: none;
-                opacity: 0.01;
+                opacity: 0.025;
             }
 
             .errorguy {
@@ -61,11 +64,13 @@
 
     <body class="crt">
 
-        <img src="https://nsudonnie.github.io/media/bezel.png" class="bezel">
-        <img src="https://nsudonnie.github.io/media/static.gif" class="static">
+        <div class="overlay">
+            <img src="/media/bezel.png" class="bezel">
+            <img src="/media/static.gif" class="static">
+        </div>
 
-        <div style="text-align: center; margin-top: 40vh;">
-            <img src="https://nsudonnie.github.io/media/errorguy.png" class="errorguy">
+        <div class="main" style="text-align: center; margin-top: 40vh;">
+            <img src="/media/errorguy.png" class="errorguy">
             <h3></h3>
             <a href="https://nsudonnie.github.io"></a>
         </div>
