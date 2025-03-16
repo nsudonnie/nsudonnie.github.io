@@ -25,8 +25,7 @@
             color: rgb(0, 255, 0);
             font-family: "VCR OSD MONO", monospace;
             -webkit-font-smoothing: none;
-            font-size: 100%;
-            line-height: 2.5vh;
+            line-height: 2vh;
             padding-left: 5vw;
             padding-top: 5vh;
             width: 90%;
@@ -66,9 +65,9 @@
     </div>
 
     <div class="main">
-        <h3></h3>
+        <p></p>
         <a href="https://nsudonnie.github.io/intro/boundaries/"></a>
-        <h3></h3>
+        <p></p>
     </div>
 
     <div class="link">
@@ -86,14 +85,14 @@
         }
 
         function newLine(num) {
-            let newElement = document.querySelectorAll("h3");
+            let newElement = document.querySelectorAll("p");
             newElement[num].innerHTML += " <br>";
         }
         
         // the typewriter function
         async function typewriter(text, num) {
 
-            let newElement = document.querySelectorAll("h3");
+            let newElement = document.querySelectorAll("p");
 
             for (let i = 0; i < text.length;) {
 
@@ -124,7 +123,7 @@
         
         async function runTypewriter() {
 
-            let elements = document.querySelectorAll("h3");
+            let elements = document.querySelectorAll("p");
             let links = document.querySelectorAll("a");
 
             elements[0].innerHTML = "[INITIALIZING, PLEASE WAIT...]";

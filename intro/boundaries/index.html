@@ -1,9 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <body>
+    <head>
 
-        <p>boundaries page not finished yet, but it is coming soon!</p>
+        <base href="https://nsudonnie.github.io">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <title>nsudonnie.github.io | boundaries</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="vfx.css">
+        <link rel="icon" href="media/funny.jpg">
+
+        <style>
+
+            @font-face {
+                font-family: "VCR OSD MONO";
+                src: url("media/VCR_OSD_MONO_1.001.ttf");
+            }
+    
+            body {
+                background-color: rgb(0, 50, 0);
+                color: rgb(0, 255, 0);
+                font-family: "VCR OSD MONO", monospace;
+                -webkit-font-smoothing: none;
+                line-height: 2vh;
+                padding-left: 5vw;
+                padding-top: 5vh;
+                width: 90%;
+            }
+            
+            .bezel {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: stretch;
+                z-index: 10;
+                pointer-events: none;
+                background-image: radial-gradient(transparent, black 125%);
+            }
+    
+            .static {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 5;
+                pointer-events: none;
+                opacity: 0.025;
+            }
+    
+        </style>
+
+    </head>
+
+    <body class="crt">
+
+        <div class="overlay">
+            <img src="media/bezel.png" class="bezel">
+            <img src="media/static.gif" class="static">
+        </div>
+
+        <div class="main">
+            <p></p>
+        </div>
+
+        <div class="link">
+            <a href="https://nsudonnie.github.io"></a>
+        </div>
+
+        <script>
+
+            let slowTime = 200;
+            let normalTime = 50;
+    
+            // the timer function, used to create a delay
+            function timer(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+    
+            function newLine() {
+                let newElement = document.querySelector("p");
+                newElement.innerHTML += " <br>";
+            }
+            
+            // the typewriter function
+            async function typewriter(text) {
+    
+                let newElement = document.querySelector("p");
+    
+                for (let i = 0; i < text.length;) {
+    
+                    newElement.innerHTML += text.charAt(i);
+                    i++;
+    
+                    if (text.charAt(i - 1) === ".") {
+                        await timer(slowTime);
+                    } else if (text.charAt(i - 1) === "!") {
+                        await timer(slowTime);
+                    } else if (text.charAt(i - 1) === "?") {
+                        await timer(slowTime);
+                    } else if (text.charAt(i - 1) === ",") {
+                        await timer(slowTime);
+                    } else if (text.charAt(i - 1) === ";") {
+                        await timer(slowTime);
+                    } else if (text.charAt(i - 1) === ":") {
+                        await timer(slowTime);
+                    } else
+                        await timer(normalTime);
+                    
+                }
+                
+                newElement.innerHTML += " <br>";
+                await timer(500);
+    
+            }
+            
+            async function runTypewriter() {
+    
+                let element = document.querySelector("p");
+                let links = document.querySelectorAll("a");
+    
+                element.innerHTML = "[INITIALIZING, PLEASE WAIT...]";
+                let prevText = element.innerHTML;
+    
+                newLine();
+                element.innerHTML += "[░░░░░░░░░░] 0%";
+                await timer(2000);
+    
+                element.innerHTML = prevText;
+                newLine();
+                element.innerHTML += "[█░░░░░░░░░] 10%";
+                await timer(500);
+                
+                element.innerHTML = prevText;
+                newLine();
+                element.innerHTML += "[███░░░░░░░] 30%";
+                await timer(750);
+    
+                element.innerHTML = prevText;
+                newLine();
+                element.innerHTML += "[██████░░░░] 60%";
+                await timer(250);
+    
+                element.innerHTML = prevText;
+                newLine();
+                element.innerHTML += "[█████████░] 90%";
+                await timer(500);
+    
+                element.innerHTML = prevText;
+                newLine();
+                element.innerHTML += "[██████████] 100%";
+                await timer(1000);
+    
+                element.innerHTML = "[INITIALIZING COMPLETE.]" + "<br>" + "[██████████] 100%";
+                await timer(2000);
+    
+                newLine();
+                newLine();
+                
+                await typewriter("boundaries page not finished, but it is coming soon!")
+                await typewriter("heres the link back to the homepage, if you need it.")
+
+                document.querySelector("a").innerHTML = "<strong> " + "[RETURN TO HOMEPAGE]" + " </strong>"
+
+            }
+            
+            runTypewriter();
+    
+        </script>
 
     </body>
 

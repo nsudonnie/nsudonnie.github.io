@@ -25,8 +25,7 @@
                 color: rgb(0, 255, 0);
                 font-family: "VCR OSD MONO", monospace;
                 -webkit-font-smoothing: none;
-                font-size: 2vh;
-                line-height: 2.5vh;
+                line-height: 2vh;
                 padding-left: 5vw;
                 padding-top: 5vh;
                 width: 90%;
@@ -68,7 +67,7 @@
         </div>
 
         <div class="main">
-            <h3></h3>
+            <p></p>
         </div>
         
         <div class="socials">
@@ -95,14 +94,14 @@
             }
     
             function newLine() {
-                let newElement = document.querySelector("h3");
+                let newElement = document.querySelector("p");
                 newElement.innerHTML += "<br>";
             }
             
             // the typewriter function
             async function typewriter(text) {
     
-                let newElement = document.querySelector("h3");
+                let newElement = document.querySelector("p");
     
                 for (let i = 0; i < text.length;) {
     
@@ -132,40 +131,42 @@
             }
             
             async function runTypewriter() {
-    
-                document.querySelector("h3").innerHTML = "[INITIALIZING, PLEASE WAIT...]";
+                
+                let element = document.querySelector("p")
+
+                element.innerHTML = "[INITIALIZING, PLEASE WAIT...]";
                 let prevText = document.querySelector("h3").innerHTML;
     
                 newLine();
-                document.querySelector("h3").innerHTML += "[░░░░░░░░░░] 0%";
+                element.innerHTML += "[░░░░░░░░░░] 0%";
                 await timer(500)
     
-                document.querySelector("h3").innerHTML = prevText;
+                element.innerHTML = prevText;
                 newLine();
-                document.querySelector("h3").innerHTML += "[█░░░░░░░░░] 10%";
+                element.innerHTML += "[█░░░░░░░░░] 10%";
                 await timer(1000)
                 
-                document.querySelector("h3").innerHTML = prevText;
+                element.innerHTML = prevText;
                 newLine();
-                document.querySelector("h3").innerHTML += "[████░░░░░░] 40%";
+                element.innerHTML += "[████░░░░░░] 40%";
                 await timer(100)
     
-                document.querySelector("h3").innerHTML = prevText;
+                element.innerHTML = prevText;
                 newLine();
-                document.querySelector("h3").innerHTML += "[██████░░░░] 60%";
+                element.innerHTML += "[██████░░░░] 60%";
                 await timer(200)
     
-                document.querySelector("h3").innerHTML = prevText;
+                element.innerHTML = prevText;
                 newLine();
-                document.querySelector("h3").innerHTML += "[█████████░] 90%";
+                element.innerHTML += "[█████████░] 90%";
                 await timer(500)
     
-                document.querySelector("h3").innerHTML = prevText;
+                element.innerHTML = prevText;
                 newLine();
-                document.querySelector("h3").innerHTML += "[██████████] 100%";
+                element.innerHTML += "[██████████] 100%";
                 await timer(1000);
     
-                document.querySelector("h3").innerHTML = "[INITIALIZING COMPLETE.]" + "<br>" + "[██████████] 100%";
+                element.innerHTML = "[INITIALIZING COMPLETE.]" + "<br>" + "[██████████] 100%";
                 await timer(2000);
     
                 newLine();
@@ -174,9 +175,9 @@
                 await typewriter("welcome to the socials page!");
                 await typewriter("click the links below to see my socials!");
     
-                prevText = document.querySelector("h3").innerHTML;
+                prevText = element.innerHTML;
                 newLine();
-                document.querySelector("h3").innerHTML += "[INITIALIZING SOCIALS...]";
+                element.innerHTML += "[INITIALIZING SOCIALS...]";
                 await timer(1000);
 
                 let newLink = document.querySelectorAll("a");
@@ -193,10 +194,10 @@
                 newLink[5].innerHTML = "<strong> " + "[DISCORD]" + " </strong>" + " <br>" + " <br>";
                 
                 await timer(500);
-                document.querySelector("h3").innerHTML = prevText;
+                element.innerHTML = prevText;
 
                 newLine();
-                document.querySelector("h3").innerHTML += "[INIT SOCIALS...OK]";
+                element.innerHTML += "[INIT SOCIALS...OK]";
                 
                 await timer(1000);
                 newLink[6].innerHTML = "<strong> " + "[RETURN TO HOMEPAGE]" + " </strong>";
