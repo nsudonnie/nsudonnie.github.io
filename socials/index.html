@@ -21,7 +21,7 @@
             }
     
             body {
-                background-color: rgb(0,50,0);
+                background-color: rgb(0, 50, 0);
                 color: rgb(0, 255, 0);
                 font-family: "VCR OSD MONO", monospace;
                 -webkit-font-smoothing: none;
@@ -77,6 +77,7 @@
             <a href="https://open.spotify.com/user/hndxcdbu1b55f2ryjky9nj4qa" target="_blank"></a>
             <a href="https://www.roblox.com/users/422816833/profile" target="_blank"></a>
             <a href="https://steamcommunity.com/id/nsudonnie/" target="_blank"></a>
+            <a href="https://discordapp.com/users/714482817194786816" target="_blank"></a>
         </div>
 
         <div class="link">
@@ -186,8 +187,10 @@
                 newLink[2].innerHTML = "<strong> " + "[SPOTIFY]" + " </strong>" + " <br>";
                 await timer(100);
                 newLink[3].innerHTML = "<strong> " + "[ROBLOX]" + " </strong>" + " <br>";
-                await timer(750);
-                newLink[4].innerHTML = "<strong> " + "[STEAM]" + " </strong>" + " <br>" + " <br>";
+                await timer(100);
+                newLink[4].innerHTML = "<strong> " + "[STEAM]" + " </strong>" + " <br>";
+                await timer(250)
+                newLink[5].innerHTML = "<strong> " + "[DISCORD]" + " </strong>" + " <br>" + " <br>";
                 
                 await timer(500);
                 document.querySelector("h3").innerHTML = prevText;
@@ -196,7 +199,7 @@
                 document.querySelector("h3").innerHTML += "[INIT SOCIALS...OK]";
                 
                 await timer(1000);
-                newLink[5].innerHTML = "<strong> " + "[RETURN TO HOMEPAGE]" + " </strong>";
+                newLink[6].innerHTML = "<strong> " + "[RETURN TO HOMEPAGE]" + " </strong>";
 
             }
             
