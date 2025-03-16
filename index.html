@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>my introoo :3</title>
+    <title>nsudonnie.github.io | homepage</title>
     <meta property="og:title" content="my introoo :3">
     <meta property="og:description" content="my cooool intro website, come here to learn more stuff about me!!!">
     <meta property="og:image" content="/media/funny.jpg">
@@ -74,11 +74,8 @@
         <h3></h3>
     </div>
 
-    <div class="intro">
+    <div class="links">
         <a href="https://nsudonnie.github.io/intro/"></a>
-    </div>
-
-    <div class="socials">
         <a href="https://nsudonnie.github.io/socials/"></a>
     </div>
 
@@ -170,8 +167,12 @@
             newLine();
 
             if (localStorage.visited) {
-                await typewriter("ya")
+
+                await typewriter("yeah you've already seen this before")
+                await typewriter("let's just get straight into the pages, shall we?")
+
             } else {
+
                 await typewriter("hello, welcome to my intro website!");
                 await typewriter("this is where you can learn some general information about me, like what my interests are!")
                 await typewriter("i hope you have a good time reading!!")
@@ -180,6 +181,7 @@
                 await typewriter("anyways, here's the pages that contain some general info about me.");
                 
                 localStorage.setItem("visited", true)
+
             }
 
             prevText = document.querySelector("h3").innerHTML;
