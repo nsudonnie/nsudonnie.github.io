@@ -32,6 +32,7 @@
             line-height: 2.5vh;
             padding-left: 5vw;
             padding-top: 5vh;
+            width: 90%;
         }
         
         .bezel {
@@ -55,7 +56,7 @@
             object-fit: cover;
             z-index: 5;
             pointer-events: none;
-            opacity: 0.01;
+            opacity: 0.025;
         }
 
     </style>
@@ -64,15 +65,22 @@
 
 <body class="crt">
 
-    <img src="media/bezel.png" class="bezel">
-    <img src="media/static.gif" class="static">
+    <div class="overlay">
+        <img src="media/bezel.png" class="bezel">
+        <img src="media/static.gif" class="static">
+    </div>
 
-    <h3></h3>
-    <a href="https://x.com/nsudonniee" target="_blank"></a>
-    <a href="https://www.youtube.com/@nsudonnie" target="_blank"></a>
-    <a href="https://open.spotify.com/user/hndxcdbu1b55f2ryjky9nj4qa" target="_blank"></a>
-    <a href="https://www.roblox.com/users/422816833/profile" target="_blank"></a>
-    <a href="https://steamcommunity.com/id/nsudonnie/" target="_blank"></a>
+    <div class="main">
+        <h3></h3>
+    </div>
+
+    <div class="intro">
+        <a href="https://nsudonnie.github.io/intro/"></a>
+    </div>
+
+    <div class="socials">
+        <a href="https://nsudonnie.github.io/socials/"></a>
+    </div>
 
     <script>
 
@@ -134,7 +142,7 @@
             newLine();
             document.querySelector("h3").innerHTML += "[█░░░░░░░░░] 10%";
             await timer(2250)
-
+            
             document.querySelector("h3").innerHTML = prevText;
             newLine();
             document.querySelector("h3").innerHTML += "[████░░░░░░] 40%";
@@ -161,35 +169,34 @@
             newLine();
             newLine();
 
-            await typewriter("Hello World!");
-            await typewriter("this is just a simple test for a website coded in HTML and CSS.");
-            await typewriter("i hope you like it! :3");
-            await typewriter("more stuff coming soon, so stay tuned!");
+            if (localStorage.visited) {
+                await typewriter("ya")
+            } else {
+                await typewriter("hello, welcome to my intro website!");
+                await typewriter("this is where you can learn some general information about me, like what my interests are!")
+                await typewriter("i hope you have a good time reading!!")
 
-            newLine();
-            await typewriter("in the meantime, why dont you check out some of my socials?");
-            
+                newLine();
+                await typewriter("anyways, here's the pages that contain some general info about me.");
+                
+                localStorage.setItem("visited", true)
+            }
+
             prevText = document.querySelector("h3").innerHTML;
             newLine();
-            document.querySelector("h3").innerHTML += "[INITIALIZING SOCIALS...]";
+            document.querySelector("h3").innerHTML += "[INITIALIZING PAGES...]";
             await timer(1000);
 
             let newLink = document.querySelectorAll("a");
-            newLink[0].innerHTML = "<strong> " + "[TWITTER (X)]" + " </strong>" + " <br>";
+            newLink[0].innerHTML = "<strong> " + "[INTRO]" + " </strong>" + " <br>";
             await timer(250);
-            newLink[1].innerHTML = "<strong> " + "[YOUTUBE]" + " </strong>" + " <br>";
-            await timer(100);
-            newLink[2].innerHTML = "<strong> " + "[SPOTIFY]" + " </strong>" + " <br>";
-            await timer(500);
-            newLink[3].innerHTML = "<strong> " + "[ROBLOX]" + " </strong>" + " <br>";
-            await timer(250);
-            newLink[4].innerHTML = "<strong> " + "[STEAM]" + " </strong>" + " <br>";
+            newLink[1].innerHTML = "<strong> " + "[SOCIALS]" + " </strong>" + " <br>";
             
             await timer(500);
             document.querySelector("h3").innerHTML = prevText;
 
             newLine();
-            document.querySelector("h3").innerHTML += "[INIT SOCIALS...OK]";
+            document.querySelector("h3").innerHTML += "[INIT PAGES...OK]";
 
         }
         
