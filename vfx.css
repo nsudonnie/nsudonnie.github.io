@@ -128,7 +128,8 @@
       text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     }
   }
-  .crt::after {
+
+.crt::after {
     content: " ";
     display: block;
     position: absolute;
@@ -141,8 +142,9 @@
     z-index: 2;
     pointer-events: none;
     animation: flicker 0.15s infinite;
-  }
-  .crt::before {
+}
+
+.crt::before {
     content: " ";
     display: block;
     position: absolute;
@@ -154,22 +156,26 @@
     z-index: 2;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
-  }
-  .crt {
-    animation: textShadow 1.6s infinite;
-  }
+}
+
+.crt {
+  animation: textShadow 1.6s infinite;
+}
 
 a:link {
   text-decoration: none;
-  border-bottom: 0.2rem rgb(0,5,0);
+  border-bottom: 0.2rem rgb(0,25,0);
   color: rgb(0,255,0);
 }
 a:visited {
   text-decoration: none;
-  border-bottom: 0.2rem rgb(0,5,0);
+  border-bottom: 0.2rem rgb(0,25,0);
   color: rgb(0,255,0);
 }
 a:hover {
   background-color: rgb(0,255,0);
-  color: rgb(0,5,0);
+  color: rgb(0,25,0);
+}
+body {
+  background-color: rgb(0, 25, 0);
 }
