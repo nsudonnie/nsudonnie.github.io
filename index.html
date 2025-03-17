@@ -59,13 +59,6 @@
             opacity: 0.025;
         }
 
-        .secret {
-            position: absolute;
-            top: 2.5vh;
-            left: 95%;
-            color: rgb(0,0,0);
-        }
-
     </style>
 
 </head>
@@ -83,6 +76,7 @@
 
     <div class="links">
         <a href="https://nsudonnie.github.io/intro/"></a>
+        <a href="https://nsudonnie.github.io/funnies/"></a>
         <a href="https://nsudonnie.github.io/socials/"></a>
     </div>
 
@@ -201,7 +195,9 @@
             let newLink = document.querySelectorAll("a");
             newLink[0].innerHTML = "<strong> " + "[INTRO]" + " </strong>" + " <br>";
             await timer(250);
-            newLink[1].innerHTML = "<strong> " + "[SOCIALS]" + " </strong>" + " <br>";
+            newLink[1].innerHTML = "<strong> " + "[FUNNIES]" + " </strong>" + " <br>";
+            await timer(100);
+            newLink[2].innerHTML = "<strong> " + "[SOCIALS]" + " </strong>" + " <br>";
             
             await timer(500);
             element.innerHTML = prevText;
