@@ -69,6 +69,8 @@
         <p></p>
         <a href="https://nsudonnie.github.io/intro/boundaries/"></a>
         <p></p>
+        <a href="https://nsudonnie.github.io/intro/music/"></a>
+        <p></p>
     </div>
 
     <div class="link">
@@ -194,11 +196,16 @@
             newLine(1);
 
             await typewriter("i love making friends, so if you share ANY of the same interests as me, moot me NOW!!!!", 1);
-            await typewriter("that's pretty much it for this page, so click on the link below to return to the main page!", 1);
+            await typewriter("click on the link below to see some music i listen to!", 1);
 
-            newLine(1);
+            links[1].innerHTML = "<strong> " + "[MUSIC]" + " </strong>"
 
-            links[1].innerHTML = "<strong> " + "[RETURN TO HOMEPAGE]" + " </strong>"
+            await timer(1000);
+            await typewriter("that's pretty much it for this page, so click on the link below to return to the main page!", 2);
+
+            newLine(2);
+
+            links[2].innerHTML = "<strong> " + "[RETURN TO HOMEPAGE]" + " </strong>"
 
         }
         
