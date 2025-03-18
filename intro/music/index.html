@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <base href="https://nsudonnie.github.io">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <title>nsudonnie.github.io | music</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="vfx.css">
+        <link rel="icon" href="media/funny.jpg">
+
+    </head>
+
+    <style>
+
+        @font-face {
+            font-family: "VCR OSD MONO";
+            src: url("media/VCR_OSD_MONO_1.001.ttf");
+        }
+
+        body {
+            background-color: rgb(0, 50, 0);
+            color: rgb(0, 255, 0);
+            font-family: "VCR OSD MONO", monospace;
+            -webkit-font-smoothing: none;
+            line-height: 2vmin;
+            font-size: 2vmin;
+            padding-left: 5vw;
+            padding-top: 5vh;
+            width: 90%;
+        }
+        
+        .bezel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: stretch;
+            z-index: 10;
+            pointer-events: none;
+            background-image: radial-gradient(transparent, black 125%);
+        }
+
+        .static {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 5;
+            pointer-events: none;
+            opacity: 0.025;
+        }
+
+        .box-container {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 15vw; /* Bigger images */
+        }
+
+        .box-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .box-text {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        a:hover {
+            width: 20vw;
+        }
+
+        .top-left { top: 30vh; left: 10vw; } /* change this all of these ones as u need */
+        .top-right { top: 30vh; left: 32vw; }
+        .bottom-left { top: 30vh; left: 54vw; }
+        .bottom-right { top: 30vh; left: 76vw; }
+
+    </style>
+
+    <body class="src">
+
+        <div class="overlay">
+            <img src="/media/bezel.png" class="bezel">
+            <img src="/media/static.gif" class="static">
+        </div>
+
+        <div class="main">
+            <p>some of the albums / eps / singles i like listening to:</p>
+            <p>click on the covers to go to the song's spotify page!</p>
+            <a href="https://nsudonnie.github.io">[RETURN TO HOMEPAGE]</a>
+        </div>
+
+        <div class="box-container top-left">
+            <a href="https://open.spotify.com/album/4imRDpzmb4zwvxKhNzJhxr?si=RwokWu_GR7ukP4J4VASDPQ" target="_blank"><img src="/media/albums/Nonagon_Infinity.png"></a>
+            <div class="box-text">"Nonagon Infinity"</div>
+            <div class="box-text">by: King Gizzard & the Lizard Wizard</div>
+            <div class="box-text">favorite song: "Big Fig Wasp"</div>
+        </div>
+    
+        <div class="box-container top-right">
+            <a href="https://open.spotify.com/album/3esB4Gl0K2LKCgACUJa3mu?si=Vl4FQ9EfQVeQQYwG9W7TJQ" target="_blank"><img src="/media/albums/Polygondwanaland.jpg"></a>
+            <div class="box-text">"Polygondwanaland"</div>
+            <div class="box-text">by: King Gizzard & the Lizard Wizard</div>
+            <div class="box-text">favorite song: "Polygondwanaland"</div>
+        </div>
+    
+        <div class="box-container bottom-left">
+            <a href="https://open.spotify.com/album/3xr6C6QA7SZxrd19SKlZa9?si=POUCTOqlSU-mt920rw2FHg" target="_blank"><img src="/media/albums/I-LIKE-CHANGE.jpg"></a>
+            <div class="box-text">"I LIKE CHANGE"</div>
+            <div class="box-text">by: Frizk</div>
+            <div class="box-text">favorite song: "DOESN'T MATTER"</div>
+        </div>
+    
+        <div class="box-container bottom-right">
+            <a href="https://open.spotify.com/album/0eFoFhftAdNeb0vtTJ0iSB?si=vIfHT5qWQ2aGyqyF6XTDvw" target="_blank"><img src="/media/albums/NASTYWERKKKK!.jpg"></a>
+            <div class="box-text">"NASTYWERKKKK!"</div>
+            <div class="box-text">by: femtanyl and ISSBROKIE</div>
+            <div class="box-text">favorite song: "NASTYWERKKKK!"</div>
+        </div>
+
+    </body>
+
+</html>
