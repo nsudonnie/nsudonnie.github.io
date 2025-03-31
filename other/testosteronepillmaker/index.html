@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <base href="https://nsudonnie.github.io">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>testosterone pill maker</title>
+
+    <link rel="icon" href="media/funny.jpg">
+
+</head>
+
+<body></body>
+
+<script>
+    
+    document.body.innerHTML += '<button id="makePill">make testosterone</button><div id="pills"></div>'
+
+    document.getElementById('makePill').addEventListener('click', () => {
+        let pill = document.createElement('div')
+        pill.textContent = 'testosterone pill'
+        pill.style.cssText = 'display:inline-block;margin:5px;padding:10px;background:#89cff0;color:white;border-radius:10px;font-weight:bold;'
+        document.getElementById('pills').appendChild(pill)
+    })
+
+</script>
+
+</html>
