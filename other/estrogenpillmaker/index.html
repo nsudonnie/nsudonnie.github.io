@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-document.body.innerHTML += '<button id="makePill">make estrogen</button><div id="pills"></div>'
+<head>
 
-document.getElementById('makePill').addEventListener('click', () => {
-    let pill = document.createElement('div')
-    pill.textContent = '🩷 estrogen pill'
-    pill.style.cssText = 'display:inline-block;margin:5px;padding:10px;background:#ff77c4;color:white;border-radius:10px;font-weight:bold;'
-    document.getElementById('pills').appendChild(pill)
-})
+    <base href="https://nsudonnie.github.io">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>estrogen pill maker</title>
+
+    <link rel="icon" href="media/funny.jpg">
+
+</head>
+
+<body></body>
+
+<script>
+    
+    document.body.innerHTML += '<button id="makePill">make estrogen</button><div id="pills"></div>'
+
+    document.getElementById('makePill').addEventListener('click', () => {
+        let pill = document.createElement('div')
+        pill.textContent = 'estrogen pill'
+        pill.style.cssText = 'display:inline-block;margin:5px;padding:10px;background:#ff77c4;color:white;border-radius:10px;font-weight:bold;'
+        document.getElementById('pills').appendChild(pill)
+    })
+
+</script>
 
 </html>
