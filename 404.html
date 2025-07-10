@@ -70,65 +70,9 @@
 
         <div class="main" style="text-align: center; margin-top: 40vh;">
             <img src="/media/errorguy.png" class="errorguy">
-            <p></p>
+            <p>404 not found. <br> this page does not exist.</p>
             <a href="https://nsudonnie.github.io"></a>
         </div>
-
-        <script>
-
-            let slowTime = 200;
-            let normalTime = 100;
-
-            // the timer function, used to create a delay
-            function timer(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
-            
-            // the typewriter function
-            async function typewriter(text) {
-    
-                let newElement = document.querySelector("p");
-    
-                for (let i = 0; i < text.length;) {
-                    newElement.innerHTML += text.charAt(i);
-                    i++;
-                    
-                    if (text.charAt(i - 1) === ".") {
-                        await timer(slowTime);
-                    } else if (text.charAt(i - 1) === "!") {
-                        await timer(slowTime);
-                    } else if (text.charAt(i - 1) === "?") {
-                        await timer(slowTime);
-                    } else if (text.charAt(i - 1) === ",") {
-                        await timer(slowTime);
-                    } else if (text.charAt(i - 1) === ";") {
-                        await timer(slowTime);
-                    } else if (text.charAt(i - 1) === ":") {
-                        await timer(slowTime);
-                    } else
-                        await timer(normalTime);
-
-                }
-                
-                newElement.innerHTML += "<br>";
-                await timer(1000);
-    
-            }
-            
-            // run typewriter, and then wait until it finishes before running the next one
-            async function runTypewriter() {
-
-                await typewriter("404 Not Found.");
-                await typewriter("This page does not exist.");
-
-                let newLink = document.querySelector("a");
-                newLink.innerHTML = "<strong> " + "[RETURN TO HOMEPAGE]" + " </strong>";
-
-            }
-            
-            runTypewriter();
-    
-        </script>
 
     </body>
 
