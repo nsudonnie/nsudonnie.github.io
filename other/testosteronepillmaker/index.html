@@ -13,17 +13,30 @@
 
 </head>
 
-<body></body>
+<body>
+    <button id="makePill">make testosterone</button>
+    <audio id="sound" src="media/chomp.mp3"></audio>
+    <div id="pills"></div>
+</body>
 
 <script>
-    
-    document.body.innerHTML += '<button id="makePill">make testosterone</button><div id="pills"></div>'
+
+    const audio = document.getElementById('sound')
 
     document.getElementById('makePill').addEventListener('click', () => {
-        let pill = document.createElement('div')
-        pill.textContent = 'testosterone pill'
-        pill.style.cssText = 'display:inline-block;margin:5px;padding:10px;background:#89cff0;color:white;border-radius:10px;font-weight:bold;'
-        document.getElementById('pills').appendChild(pill)
+        
+        let tPill = document.createElement('button')
+        tPill.id = "pill"
+        tPill.textContent = 'testosterone pill'
+        tPill.style.cssText = 'display:inline-block;margin:5px;padding:10px;background:#ff77c4;color:white;border-radius:10px;font-weight:bold;'
+        document.getElementById('pills').appendChild(tPill)
+
+        tPill.addEventListener('click', () => {
+            audio.currentTime = 0
+            audio.play()
+            tPill.remove()
+        })
+
     })
 
 </script>

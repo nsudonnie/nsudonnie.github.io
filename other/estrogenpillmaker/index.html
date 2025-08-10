@@ -24,21 +24,20 @@
     const audio = document.getElementById('sound')
 
     document.getElementById('makePill').addEventListener('click', () => {
+        
         let ePill = document.createElement('button')
         ePill.id = "pill"
         ePill.textContent = 'estrogen pill'
         ePill.style.cssText = 'display:inline-block;margin:5px;padding:10px;background:#ff77c4;color:white;border-radius:10px;font-weight:bold;'
         document.getElementById('pills').appendChild(ePill)
-    })
 
-    if (document.getElementById('pill')) {
-
-        document.getElementById('pill').addEventListener('click', () => {
+        ePill.addEventListener('click', () => {
             audio.currentTime = 0
             audio.play()
+            ePill.remove()
         })
-        
-    }
+
+    })
 
 </script>
 
