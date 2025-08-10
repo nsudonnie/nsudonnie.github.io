@@ -163,7 +163,7 @@
 }
 
 a:link {
-  text-decoration: underline;
+  text-decoration: none;
   border-bottom: 0.2rem rgb(0,50,0);
   color: rgb(0,255,0);
 }
