@@ -4,84 +4,70 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>homepage</title>
-    <meta property="og:title" content="my introoo :3">
-    <meta property="og:description" content="my cooool intro website, come here to learn more stuff about me!!!">
-    <meta property="og:image" content="/media/funny.jpg">
-    <meta property="og:url" content="https://example.com/page">
-    <meta property="og:type" content="website">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="vfx.css">
-    <link rel="icon" href="media/funny.jpg">
-
-    <style>
-
-        @font-face {
-            font-family: "VCR OSD MONO";
-            src: url("media/VCR_OSD_MONO_1.001.ttf");
-        }
-
-        body {
-            background-color: rgb(0, 50, 0);
-            color: rgb(0, 255, 0);
-            font-family: "VCR OSD MONO", monospace;
-            -webkit-font-smoothing: none;
-            line-height: 2vmin;
-            font-size: 4.5vmin;
-            text-align: center;
-            padding-top: 35vh;
-        }
-
-        .links {
-            padding-top: 7vh;
-      		text-align: center;
-        }
-        
-        .bezel {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: stretch;
-            z-index: 10;
-            pointer-events: none;
-            background-image: radial-gradient(transparent, black 125%);
-        }
-
-        .static {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 5;
-            pointer-events: none;
-            opacity: 0.025;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body class="crt">
+<body>
 
-    <div class="overlay">
-        <img src="media/bezel.png" class="bezel">
-        <img src="media/static.gif" class="static">
+    <div id="parent">
+        <div id="container">
+
+            <p id="page-title">homepage</p>
+
+            <p id="main-text">
+                i wonder how many words i can fit into this one textbox. 
+                man it would be really funny if this went off the screen 
+                and i couldnt see it! that would sure suck.
+            </p>
+
+            <img id="char-img" src="assets/funny.jpg">
+
+            <div id="links">
+                <a id="link" href="">about me</a>
+                <a id="link" href="">boundaries</a>
+                <a id="link" href="">socials</a>
+                <a id="link" href="">other</a>
+            </div>
+
+        </div>
     </div>
 
-    <div class="main">
-        <p>welcome to my website!</p>
-        <p>click the link(s) below to learn more about me!</p>
-    </div>
+    <script>
 
-    <div class="links">
-        <a href="https://nsudonnie.github.io/aboutme/"><strong> <u>[ABOUT ME]</u> </strong></a> <a href="https://nsudonnie.github.io/socials/"><strong> <u>[SOCIALS]</u> </strong></a>
-    </div>
+        const parent = document.getElementById("parent");
+        const container = parent.querySelector("#container");
+
+        const now = new Date();
+        const month = now.getMonth(); // 0 indexed (0-11)
+
+        if (month == 8 || month == 9 || month == 10) { // autumn
+
+            parent.style.backgroundImage = "url()" // fill with falling leaf gif
+            container.style.backgroundColor = "rgb(255, 214, 165)"
+
+        } else if (month == 11 || month == 0 || month == 1) { // winter
+
+            parent.style.backgroundImage = "url()" // fill with falling snow gif
+            container.style.backgroundColor = "rgb(181, 233, 255)"
+
+        } else if (month == 2 || month == 3 || month == 4) { // spring
+
+            parent.style.backgroundImage = "url()" // fill with flower gif
+            container.style.backgroundColor = "rgb(195, 255, 181)"
+
+        } else if (month == 5 || month == 6 || month == 7) { // summer
+
+            parent.style.backgroundImage = "url()" // fill with sunshine gif
+            container.style.backgroundColor = "rgb(255, 251, 181)"
+
+        }
+
+    </script>
 
 </body>
 

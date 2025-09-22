@@ -1,0 +1,75 @@
+body {
+    background-color: #ab4a00;
+    overflow: hidden;
+    pointer-events: none;
+
+    background-image: url(); /* replace with wood img */
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+#parent {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: auto 100vh;
+    background-repeat: repeat-x;
+
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+}
+
+#container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80vw;
+    height: 100vh;
+    outline: 5px solid black;
+}
+
+#page-title {
+    position: absolute;
+
+    font-size: 3.5vmax;
+    top: 0;
+    left: 25vw;
+}
+
+#main-text {
+    position: absolute;
+
+    overflow-wrap: anywhere;
+    text-align: center;
+    font-size: 3.5vmax;
+    width: 25vw;
+    right: 15vw;
+}
+
+#char-img {
+    position: absolute;
+
+    left: 20vw;
+    height: 60vh; /* replace with dimensions of character art */
+    width: 25vw;
+}
+
+#links {
+    position: absolute;
+    pointer-events: all;
+
+    font-size: 2vmax;
+    left: 15vw;
+    bottom: 5vh;
+}
+
+#link {
+    font-weight: bold;
+    padding-right: 3.5vmax;
+}
