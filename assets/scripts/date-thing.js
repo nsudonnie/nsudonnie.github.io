@@ -6,7 +6,7 @@ const month = now.getMonth(); // 0 indexed (0-11)
 
  if (month == 8 || month == 9 || month == 10) { // autumn
 
-    parent.style.backgroundImage = "url(https://nsudonnie.github.io/assets/leaves-falling.gif)"
+    parent.style.backgroundImage = "url(https://nsudonnie.github.io/assets/images/leaves-falling.gif)"
     container.style.backgroundColor = "rgb(255, 214, 165)"
 
 } else if (month == 11 || month == 0 || month == 1) { // winter

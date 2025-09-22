@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     pointer-events: none;
 
-    background-image: url(/assets/wood.jpg);
+    background-image: url(/assets/images/wood.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
