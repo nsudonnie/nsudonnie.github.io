@@ -66,10 +66,20 @@ body {
 
     font-size: 2vmax;
     left: 15vw;
-    bottom: 5vh;
+    bottom: 8vh;
 }
 
 #link {
     font-weight: bold;
     padding-right: 3.5vmax;
+}
+
+#alt-link {
+    position: absolute;
+    pointer-events: all;
+    font-weight: bold;
+
+    font-size: 2vmax;
+    left: 30vw;
+    bottom: 3vh;
 }
